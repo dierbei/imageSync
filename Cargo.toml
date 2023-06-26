@@ -1,0 +1,19 @@
+[package]
+name = "image-sync"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bollard = "0.14.0"
+anyhow = "1.0"
+tokio = { version = "1", features = ["rt", "macros", "net", "time", "io-util"] }
+futures = "0.3"
+warp = "0.3.5"
+tracing = "0.1" #{ version = "0.1.21", default-features = false, features = ["log", "std"] }
+tracing-subscriber = { version = "0.3.17", features = ["env-filter"] }
+tracing-log = "0.1"
+serde = "1.0"
+serde_json = "1.0"
+

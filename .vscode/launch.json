@@ -1,0 +1,66 @@
+// {
+//     // 使用 IntelliSense 了解相关属性。 
+//     // 悬停以查看现有属性的描述。
+//     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+//     "version": "0.2.0",
+//     "configurations": [
+//         {
+//             "type": "lldb",
+//             "request": "launch",
+//             "name": "Debug executable 'image-sync'",
+//             "cargo": {
+//                 "args": [
+//                     "build",
+//                     "--bin=image-sync",
+//                     "--package=image-sync"
+//                 ],
+//                 "filter": {
+//                     "name": "image-sync",
+//                     "kind": "bin"
+//                 }
+//             },
+//             "args": [],
+//             "cwd": "${workspaceFolder}"
+//         },
+//         {
+//             "type": "lldb",
+//             "request": "launch",
+//             "name": "Debug unit tests in executable 'image-sync'",
+//             "cargo": {
+//                 "args": [
+//                     "test",
+//                     "--no-run",
+//                     "--bin=image-sync",
+//                     "--package=image-sync"
+//                 ],
+//                 "filter": {
+//                     "name": "image-sync",
+//                     "kind": "bin"
+//                 }
+//             },
+//             "args": [],
+//             "cwd": "${workspaceFolder}"
+//         }
+//     ]
+// }
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(OSX) Launch",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceRoot}/target/debug/${workspaceFolderBasename}",
+            "args": [
+            ],
+            "env": {
+                "RUST_LOG": "info",
+                "USERNAME": "dierbei",
+                "PASSWORD": "czc19990402"
+            },
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": "build"
+        }
+    ]
+}
